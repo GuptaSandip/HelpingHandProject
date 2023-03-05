@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block body %}
+<!--Carousel-->
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/static/3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Take test and check your Eligibility.</h5>
+                <p>Go again: One more time. ...</p>
+                <a href="/register">
+                    <button class="btn btn-danger btn-lg"> Register </button>
+                </a>
+                <a href="/login">
+                    <button class="btn btn-success btn-lg"> Login </button>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Take Course and improve your Knowledge.</h5>
+                <p>The way to get started is to quit talking and begin doing.</p>
+                <a href="/register">
+                    <button class="btn btn-danger btn-lg"> Register </button>
+                </a>
+                <a href="/login">
+                    <button class="btn btn-success btn-lg"> Login </button>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Read something extra that's make you different from crowd.</h5>
+                <p>It is never to late to be what you might have been.</p>
+                <a href="/register">
+                    <button class="btn btn-danger btn-lg"> Register </button>
+                </a>
+                <a href="/login">
+                    <button class="btn btn-success btn-lg"> Login </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </button>
+</div>
+
+
+
+
+<!--bottom carousel-->
+
+<div class="container my-4">
+    <div class="row featurette d-flex justify-contain-center align-item-centers">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Skill speaks louder than words. <span class="text-muted">It’ll
+                    blow your mind.</span></h2>
+            <p class="lead">Take chance to improve your skillset and make your self able for your dream job.
+                "HelpingHand" offers student to enhance thier skill by taking Aptitude test, read more about
+                Interview question and also General Knowledge. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestias veritatis aperiam, harum impedit a delectus ullam reiciendis totam nulla velit, explicabo
+                veniam id ab culpa eveniet? Consectetur, similique placeat saepe magnam tempore pariatur cumque facilis
+                repellendus aperiam, impedit laboriosam quas quisquam? Debitis perferendis totam unde praesentium natus
+                molestiae, odio eligendi!</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                src="/static/c1.jpg" alt="">
+
+        </div>
+    </div>
+    <div class="row featurette d-flex justify-contain-center align-item-centers">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Invest your time in learning, so it can help you what you
+                wants. <span class="text-muted">It’ll
+                    blow your mind.</span></h2>
+            <p class="lead">"HelpingHand" suggest micro-courses to improve thier learning and get hired in top
+                companys. It offers
+                course like on Aptitude test, Interviews and General Knowledge. Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Id delectus, nihil, inventore sunt illum iusto quia repudiandae eos ratione sequi,
+                numquam fugiat! Magnam consectetur tempore quam eos aperiam pariatur architecto saepe quae deserunt
+                quia? Provident ipsum vero suscipit! Autem aspernatur quo minus nam consectetur iure modi obcaecati
+                totam est aperiam.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                src="/static/C2.jpg" alt="">
+
+        </div>
+    </div>
+
+</div>
+{% endblock body %}

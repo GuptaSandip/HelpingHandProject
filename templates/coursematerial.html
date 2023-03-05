@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block title %}coursematerial{% endblock title %}
+
+{% block body %}
+<style>
+    video,
+    iframe,
+    #text_area {
+        width: 100%;
+        min-width: 300px;
+    }
+</style>
+<div class="container">
+    <h2 class="pb-2 my-2">Learning never exhausts the mind</h2>
+    <p class="fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nisi quidem similique. Libero
+        praesentiumporrocumque amet soluta nisi minima consequuntur necessitatibus. Consectetur, nihil reiciendis ut,
+        reprehenderit
+        ullam, vitae dolore illum doloribus consequatur eveniet aliquid nulla tenetur sunt corrupti adipisci sint.
+        Minima impedit quam nam quisquam quibusdam provident aut temporibus voluptates iusto laborum, nesciunt sint
+        estrerum itaque vitae sunt similique repudiandae adipisci! In minus quas provident, facilis impedit quasi
+        maioresrepellendus deleniti sequi! Veritatis mollitia, corrupti repellendus voluptate eum ad explicabo hic.
+        Tempora
+        iusto quia rem officiis facilis, molestias consequuntur error. Libero assumendas quis eligendi beatae autem,
+        modivoluptas vitae ratione eveniet est maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi
+        expedita dolorem officia ut porro esse repellat beatae non, commodi harum perferendis! Quidem, sed doloremque
+        aut distinctio, reprehenderit dolorem nesciunt praesentium aspernatur obcaecati nulla maxime! Nobis nesciunt
+        unde excepturi, necessitatibus, id vel velit, est ipsum aspernatur delectus laborum. Doloremque, dolorum!</p>
+    <br>
+    <p class="fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit eligendi totam explicabo,
+        neque ametnatus repudiandae. Sit, impedit? Illo nesciunt nisi aliquid a corporis vel eligendi minus veritatis
+        iure.
+        Voluptatum, ex. Qui ex perferendis adipisci unde quasi, amet quos magnam accusantium autem culpa, suscipit
+        aspernatur asperiores, veritatis deserunt eum eos at? Quod esse commodi nesciunt exercitationem voluptates
+        sed ea sunt tempora consequuntur possimus atque ut assumenda rem officiis optio, rerum molestiae quia vero
+        vitae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat harum fugiat deleniti dicta
+        consectetur, magni aut iure? Illo, accusamus tempora?</p>
+
+    <b>
+        <p>Let's Learn from video what exactly Quantitative Aptitude is:</p>
+    </b>
+
+    <p class="fs-5 border-bottom">let's focus on video contant which gives you clear understanding about topic.</p>
+    <div style="text-align: center;">
+        <!-- <iframe width="560" height="315" src="https://youtu.be/3RC4xVMdI78" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3RC4xVMdI78" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+    <!-- <div style="text-align: center;">
+        <video width="900" height="500" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div> -->
+
+
+    <!--Questions-->
+    <form name="coursematerialquiz" , id="coursematerialquiz">
+        <div class="container my-5">
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>1.
+                        Find the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in
+                        each case.</h5>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>
+                            <input type="radio" name="q1" value="A"> A. 4<br>
+                            <input type="radio" name="q1" value="B"> B. 7<br>
+                            <input type="radio" name="q1" value="C"> C. 9<br>
+                            <input type="radio" name="q1" value="D"> D. 13<br>
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>2.
+                        A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the
+                        train?</h5>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>
+                            <input type="radio" name="q2" value="A"> A. 120 m<br>
+                            <input type="radio" name="q2" value="B"> B. 180 m<br>
+                            <input type="radio" name="q2" value="C"> C. 324 m<br>
+                            <input type="radio" name="q2" value="D"> D. 150 m<br>
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>Write your Top 5 learning from course. (Not Mandatory)</h5>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <textarea name="text_area" id="text_area" cols="100" rows="10"></textarea>
+                    </blockquote>
+                </div>
+            </div>
+            <!--submit button-->
+            <button type="submit" class="btn btn-primary btn-lg" id="submit" value="submit">submit</button>
+
+
+        </div>
+    </form>
+
+    <!-- javascript code -->
+    <script>
+        function validateForm() {
+            var radioButtons1 = document.getElementsByName("q1");
+            var radioButtons2 = document.getElementsByName("q2");
+
+
+            var checked1 = false;
+            var checked2 = false;
+
+            for (var i = 0; i < radioButtons1.length; i++) {
+                if (radioButtons1[i].checked) {
+                    checked1 = true;
+                    break;
+                }
+            }
+            for (var i = 0; i < radioButtons2.length; i++) {
+                if (radioButtons2[i].checked) {
+                    checked2 = true;
+                    break;
+                }
+            }
+
+
+            if (!checked1 || !checked2) {
+                alert("Please answer both questions");
+                return false;
+            }
+            return true;
+        }
+
+        document.getElementById("coursematerialquiz").onsubmit = function (event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            } else {
+                var correctAnswers = 0;
+                if (document.getElementsByName("q1")[0].checked) {
+                    correctAnswers++;
+                }
+                if (document.getElementsByName("q2")[3].checked) {
+                    correctAnswers++;
+                }
+
+
+                if (correctAnswers <= 1) {
+                    document.write("Great to see that you are completed course but you need to refer course again due to low score.");
+                } else {
+                    document.write("Congrtulation!!! Now you are prepare for Aptitude test.");
+                }
+            }
+        };
+    </script>
+
+</div>
+
+
+
+{% endblock body %}
